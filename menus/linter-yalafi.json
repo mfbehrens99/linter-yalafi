@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle linter-yalafi",
+        "command": "linter-yalafi:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "linter-yalafi",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "linter-yalafi:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
