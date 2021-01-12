@@ -1,18 +1,54 @@
 {
   "name": "linter-yalafi",
   "main": "./lib/linter-yalafi",
-  "version": "0.0.0",
-  "description": "A short description of your package",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "linter-yalafi:toggle"
-  },
-  "repository": "https://github.com/atom/linter-yalafi",
+  "version": "0.0.1",
+  "description": "This package is linting LaTeX files for spelling and grammar errors",
+  "keywords": ["latex","yalafi","languagetool","lint","linter"],
+  "repository": "https://github.com/mfbehrens99/linter-yalafi",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
+  "configSchema": {
+    "executablePath": {
+      "type": "string",
+      "default": "yalafi",
+      "description": "Command or full path to yalafi. Use %p for current project directory (no trailing /) or %h for current project name.",
+      "order": 1
+    },
+    "pythonPath": {
+      "type": "string",
+      "default": "",
+      "description": "Paths to be added to $PYTHONPATH. Use %p for current project directory or %f for the directory of the current file.",
+      "order": 1
+    },
+    "workingDirectory": {
+      "type": "string",
+      "default": "%p",
+      "description": "Directory yalafi is run from. Use %p for the current project directory or %f for the directory of the current file.",
+      "order": 2
+    },
+    "disableTimeout": {
+      "title": "Disable Execution Timeout",
+      "type": "boolean",
+      "default": false,
+      "description": "By default processes running longer than 10 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
+      "order": 3
+    }
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "2.0.0": "provideLinter"
+      }
+    }
+  },
   "dependencies": {
-  }
+    "atom-linter": "10.0.0",
+    "atom-package-deps": "5.1.0",
+    "lazy-req": "2.0.0"
+  },
+  "package-deps": [
+    "linter:2.0.0"
+  ]
 }
