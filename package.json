@@ -1,7 +1,7 @@
 {
   "name": "linter-yalafi",
   "main": "./lib/linter-yalafi",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "This package is linting LaTeX files for spelling and grammar errors",
   "keywords": [
     "latex",
