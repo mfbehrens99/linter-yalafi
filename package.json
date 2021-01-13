@@ -52,12 +52,6 @@
       "default": "",
       "description": "Paths to be added to $PYTHONPATH. Use %p for current project directory or %f for the directory of the current file.",
       "order": 6
-    },
-    "workingDirectory": {
-      "type": "string",
-      "default": "%p",
-      "description": "Directory yalafi is run from. Use %p for the current project directory or %f for the directory of the current file.",
-      "order": 7
     }
   },
   "providedServices": {
