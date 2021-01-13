@@ -10,37 +10,54 @@
     "atom": ">=1.0.0 <2.0.0"
   },
   "configSchema": {
+    "language": {
+      "type": "string",
+      "default": "en-GB",
+      "description": "Specify the language of your LaTeX file. (en-GB, de-DE, fr-FR)",
+      "order": 1
+    },
+    "server": {
+      "title": "Select LanguageTool instance",
+      "type": "string",
+      "default": "lt",
+      "description": "YaLafi offers different servers that can be used to check your LaTeX files",
+      "enum": [
+        {"value": "lt", "description": "languagetool.org (Public LanguageTool server)"},
+        {"value": "my", "description": "localhost (Private LanguageTool server)"}
+      ],
+      "order": 2
+    },
     "executablePath": {
       "type": "string",
       "default": "yalafi",
       "description": "Command or full path to yalafi. Use %p for current project directory (no trailing /) or %h for current project name.",
-      "order": 1
+      "order": 3
     },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
       "default": false,
       "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 2
+      "order": 4
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 3
+      "order": 5
     },
     "pythonPath": {
       "type": "string",
       "default": "",
       "description": "Paths to be added to $PYTHONPATH. Use %p for current project directory or %f for the directory of the current file.",
-      "order": 4
+      "order": 6
     },
     "workingDirectory": {
       "type": "string",
       "default": "%p",
       "description": "Directory yalafi is run from. Use %p for the current project directory or %f for the directory of the current file.",
-      "order": 5
+      "order": 7
     }
   },
   "providedServices": {
