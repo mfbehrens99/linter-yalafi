@@ -3,7 +3,13 @@
   "main": "./lib/linter-yalafi",
   "version": "0.0.0",
   "description": "This package is linting LaTeX files for spelling and grammar errors",
-  "keywords": ["latex","yalafi","languagetool","lint","linter"],
+  "keywords": [
+    "latex",
+    "yalafi",
+    "languagetool",
+    "lint",
+    "linter"
+  ],
   "repository": "https://github.com/mfbehrens99/linter-yalafi",
   "license": "MIT",
   "engines": {
@@ -22,8 +28,14 @@
       "default": "lt",
       "description": "YaLafi offers different servers that can be used to check your LaTeX files",
       "enum": [
-        {"value": "lt", "description": "languagetool.org (Public LanguageTool server)"},
-        {"value": "my", "description": "localhost (Private LanguageTool server)"}
+        {
+          "value": "lt",
+          "description": "languagetool.org (Public LanguageTool server)"
+        },
+        {
+          "value": "my",
+          "description": "localhost (Private LanguageTool server)"
+        }
       ],
       "order": 2
     },
