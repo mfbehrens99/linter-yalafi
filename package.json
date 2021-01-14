@@ -41,7 +41,7 @@
     },
     "executablePath": {
       "type": "string",
-      "default": "yalafi",
+      "default": "python",
       "description": "Command or full path to python.",
       "order": 3
     },
