@@ -39,6 +39,34 @@
       ],
       "order": 2
     },
+    "languageToolPath": {
+      "title": "LanguageTool path",
+      "type": "string",
+      "default": "",
+      "description": "Path to LanguageTool directory",
+      "order": 3
+    },
+    "languageToolnGramDataPath": {
+      "title": "LanguageTool path for n-gram data",
+      "type": "string",
+      "default": "",
+      "description": "Path to n-gram data. It is automatically added to the LanguageTool server options if present",
+      "order": 3
+    },
+    "languageToolServerOptions": {
+      "title": "LanguageTool server options",
+      "type": "string",
+      "default": "",
+      "description": "Additional options passed to the local LanguageTool server while starting. The path for n-gram data is added automatically if given.",
+      "order": 3
+    },
+    "disabledRules": {
+      "title": "Ignored LanguageTool rules",
+      "type": "string",
+      "default": "WHITESPACE_RULE",
+      "description": "Comma-separated list of LanguageTool rules that should be ignored",
+      "order": 3
+    },
     "executablePath": {
       "type": "string",
       "default": "python",
