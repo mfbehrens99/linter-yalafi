@@ -39,27 +39,6 @@
       ],
       "order": 2
     },
-    "languageToolPath": {
-      "title": "LanguageTool path",
-      "type": "string",
-      "default": "",
-      "description": "Path to LanguageTool directory",
-      "order": 3
-    },
-    "languageToolnGramDataPath": {
-      "title": "LanguageTool path for n-gram data",
-      "type": "string",
-      "default": "",
-      "description": "Path to n-gram data. It is automatically added to the LanguageTool server options if present",
-      "order": 3
-    },
-    "languageToolServerOptions": {
-      "title": "LanguageTool server options",
-      "type": "string",
-      "default": "",
-      "description": "Additional options passed to the local LanguageTool server while starting. The path for n-gram data is added automatically if given.",
-      "order": 3
-    },
     "disabledRules": {
       "title": "Ignored LanguageTool rules",
       "type": "string",
@@ -71,21 +50,42 @@
       "type": "string",
       "default": "python",
       "description": "Command or full path to python.",
-      "order": 3
+      "order": 4
+    },
+    "languageToolPath": {
+      "title": "LanguageTool path",
+      "type": "string",
+      "default": "",
+      "description": "Path to LanguageTool directory",
+      "order": 5
+    },
+    "languageToolnGramDataPath": {
+      "title": "LanguageTool path for n-gram data",
+      "type": "string",
+      "default": "",
+      "description": "Path to n-gram data. It is automatically added to the LanguageTool server options if present",
+      "order": 6
+    },
+    "languageToolServerOptions": {
+      "title": "LanguageTool server options",
+      "type": "string",
+      "default": "",
+      "description": "Additional options passed to the local LanguageTool server while starting. The path for n-gram data is added automatically if given.",
+      "order": 7
     },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
       "default": false,
       "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 4
+      "order": 8
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 5
+      "order": 9
     }
   },
   "providedServices": {
