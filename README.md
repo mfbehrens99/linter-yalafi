@@ -22,6 +22,9 @@ More information on how to install LanguageTool can be found [here](https://gith
 
 Then you can set the 'LanguageTool path' in the settings.
 It should point to the directory containing e.g. 'languagetool-server.jar'.
+This package will then start the server if it is not already running.
+You can also start the server manually by invoking YaLafi yourself, e.g. with `python -m yalafi.shell --lt-server my file.tex`.
+
 
 For even better spell-checking one can use n-gram data to find errors with words that are often confused.
 More information and the n-gram data can be found [here](https://dev.languagetool.org/finding-errors-using-n-gram-data.html).
