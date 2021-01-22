@@ -63,14 +63,14 @@
       "title": "LanguageTool path for n-gram data",
       "type": "string",
       "default": "",
-      "description": "Path to n-gram data. It is automatically added to the LanguageTool server options if present",
+      "description": "Path to n-gram data for the LanguageTool server. For more information about n-gram data visit https://dev.languagetool.org/finding-errors-using-n-gram-data.html and look into the README.",
       "order": 6
     },
     "languageToolServerOptions": {
       "title": "LanguageTool server options",
       "type": "string",
       "default": "",
-      "description": "Additional options passed to the local LanguageTool server while starting. The path for n-gram data is added automatically if given.",
+      "description": "Additional options passed to the local LanguageTool server. The path for n-gram data is added automatically if given.",
       "order": 7
     },
     "disableTimeout": {
