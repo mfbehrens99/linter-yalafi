@@ -47,7 +47,7 @@
     },
     "showContextInLinterMessage": {
       "type": "boolean",
-      "default": "true",
+      "default": "false",
       "description": "Show the YaLafi output in the linter message to see if an error is due to the conversion YaLafi has done.",
       "order": 3
     },
