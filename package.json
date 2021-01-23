@@ -82,6 +82,12 @@
       "description": "Additional options passed to the local LanguageTool server. The path for n-gram data is added automatically if given.",
       "order": 8
     },
+    "showContextInLinterMessage": {
+      "type": "boolean",
+      "default": "false",
+      "description": "Show the YaLafi output in the linter message to see if an error is due to the conversion YaLafi has done.",
+      "order": 3
+    },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
