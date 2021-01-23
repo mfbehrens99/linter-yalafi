@@ -52,40 +52,49 @@
       "description": "Command or full path to python.",
       "order": 4
     },
+    "yalafiOptions": {
+      "type": "array",
+      "description": "Comma separated list of arguments that are passed to YaLafi. For example `--simple-equations`. If the argument takes a value, you need to place a `=` between argument and value.",
+      "default": [],
+      "items": {
+        "type": "string"
+      },
+      "order": 5
+    },
     "languageToolPath": {
       "title": "LanguageTool path",
       "type": "string",
       "default": "",
       "description": "Path to LanguageTool directory",
-      "order": 5
+      "order": 6
     },
     "languageToolnGramDataPath": {
       "title": "LanguageTool path for n-gram data",
       "type": "string",
       "default": "",
       "description": "Path to n-gram data for the LanguageTool server. For more information about n-gram data visit https://dev.languagetool.org/finding-errors-using-n-gram-data.html and look into the README.",
-      "order": 6
+      "order": 7
     },
     "languageToolServerOptions": {
       "title": "LanguageTool server options",
       "type": "string",
       "default": "",
       "description": "Additional options passed to the local LanguageTool server. The path for n-gram data is added automatically if given.",
-      "order": 7
+      "order": 8
     },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
       "default": false,
       "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 8
+      "order": 9
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 9
+      "order": 10
     }
   },
   "providedServices": {
