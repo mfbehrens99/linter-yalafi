@@ -42,8 +42,8 @@
     "disabledRules": {
       "title": "Ignored LanguageTool rules",
       "type": "string",
-      "default": "WHITESPACE_RULE",
-      "description": "Comma-separated list of LanguageTool rules that should be ignored",
+      "default": "",
+      "description": "Comma-separated list of LanguageTool rules that should be ignored. If you change this, you may want to add `WHITESPACE_RULE` which is the YaLafi default value.",
       "order": 3
     },
     "executablePath": {
