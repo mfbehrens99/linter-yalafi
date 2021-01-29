@@ -22,11 +22,28 @@
       "description": "Specify the language of your LaTeX file. (en-GB, de-DE, fr-FR)",
       "order": 1
     },
+    "server": {
+      "title": "Select LanguageTool instance",
+      "type": "string",
+      "default": "lt",
+      "description": "YaLafi offers different servers that can be used to check your LaTeX files",
+      "enum": [
+        {
+          "value": "lt",
+          "description": "languagetool.org (Public LanguageTool server)"
+        },
+        {
+          "value": "my",
+          "description": "localhost (Private LanguageTool server)"
+        }
+      ],
+      "order": 2
+    },
     "yalafi": {
       "title": "YaLafi Settings",
       "collapsed": true,
       "type": "object",
-      "order": 2,
+      "order": 3,
       "properties": {
         "executablePath": {
           "type": "string",
@@ -49,25 +66,8 @@
       "title": "LanguageTool Settings",
       "collapsed": true,
       "type": "object",
-      "order": 3,
+      "order": 4,
       "properties": {
-        "server": {
-          "title": "Select LanguageTool instance",
-          "type": "string",
-          "default": "lt",
-          "description": "YaLafi offers different servers that can be used to check your LaTeX files",
-          "enum": [
-            {
-              "value": "lt",
-              "description": "languagetool.org (Public LanguageTool server)"
-            },
-            {
-              "value": "my",
-              "description": "localhost (Private LanguageTool server)"
-            }
-          ],
-          "order": 1
-        },
         "disabledRules": {
           "title": "Ignored LanguageTool rules",
           "type": "string",
@@ -102,21 +102,21 @@
       "type": "boolean",
       "default": "false",
       "description": "Show the YaLafi output in the linter message to see if an error is due to the conversion YaLafi has done.",
-      "order": 4
+      "order": 5
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 5
+      "order": 6
     },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
       "default": false,
       "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 6
+      "order": 7
     }
   },
   "providedServices": {
