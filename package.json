@@ -24,9 +24,9 @@
     },
     "lt": {
       "title": "LanguageTool Settings",
-      "collapsed": false,
+      "collapsed": true,
       "type": "object",
-      "order": 2,
+      "order": 3,
       "properties": {
         "server": {
           "title": "Select LanguageTool instance",
@@ -92,7 +92,7 @@
       "title": "YaLafi Settings",
       "collapsed": true,
       "type": "object",
-      "order": 3,
+      "order": 2,
       "properties": {
         "executablePath": {
           "type": "string",
