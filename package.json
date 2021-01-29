@@ -22,6 +22,29 @@
       "description": "Specify the language of your LaTeX file. (en-GB, de-DE, fr-FR)",
       "order": 1
     },
+    "yalafi": {
+      "title": "YaLafi Settings",
+      "collapsed": true,
+      "type": "object",
+      "order": 2,
+      "properties": {
+        "executablePath": {
+          "type": "string",
+          "default": "python",
+          "description": "Command or full path to python.",
+          "order": 2
+        },
+        "options": {
+          "type": "array",
+          "description": "Comma separated list of arguments that are passed to YaLafi. For example `--simple-equations`. If the argument takes a value, you need to place a `=` between argument and value.",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "order": 1
+        }
+      }
+    },
     "lt": {
       "title": "LanguageTool Settings",
       "collapsed": true,
@@ -79,44 +102,21 @@
       "type": "boolean",
       "default": "false",
       "description": "Show the YaLafi output in the linter message to see if an error is due to the conversion YaLafi has done.",
-      "order": 3
+      "order": 4
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 4
-    },
-    "yalafi": {
-      "title": "YaLafi Settings",
-      "collapsed": true,
-      "type": "object",
-      "order": 2,
-      "properties": {
-        "executablePath": {
-          "type": "string",
-          "default": "python",
-          "description": "Command or full path to python.",
-          "order": 2
-        },
-        "options": {
-          "type": "array",
-          "description": "Comma separated list of arguments that are passed to YaLafi. For example `--simple-equations`. If the argument takes a value, you need to place a `=` between argument and value.",
-          "default": [],
-          "items": {
-            "type": "string"
-          },
-          "order": 1
-        }
-      }
+      "order": 5
     },
     "disableTimeout": {
       "title": "Disable Execution Timeout",
       "type": "boolean",
       "default": false,
       "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 5
+      "order": 6
     }
   },
   "providedServices": {
