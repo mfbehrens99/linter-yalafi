@@ -39,68 +39,84 @@
       ],
       "order": 2
     },
-    "disabledRules": {
-      "title": "Ignored LanguageTool rules",
-      "type": "string",
-      "default": "",
-      "description": "Comma-separated list of LanguageTool rules that should be ignored. If you change this, you may want to add `WHITESPACE_RULE` which is the YaLafi default value.",
-      "order": 3
+    "yalafi": {
+      "title": "YaLafi Settings",
+      "collapsed": true,
+      "type": "object",
+      "order": 3,
+      "properties": {
+        "executablePath": {
+          "type": "string",
+          "default": "python",
+          "description": "Command or full path to python.",
+          "order": 2
+        },
+        "options": {
+          "type": "array",
+          "description": "Comma separated list of arguments that are passed to YaLafi. For example `--simple-equations`. If the argument takes a value, you need to place a `=` between argument and value.",
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "order": 1
+        }
+      }
     },
-    "executablePath": {
-      "type": "string",
-      "default": "python",
-      "description": "Command or full path to python.",
-      "order": 4
-    },
-    "yalafiOptions": {
-      "type": "array",
-      "description": "Comma separated list of arguments that are passed to YaLafi. For example `--simple-equations`. If the argument takes a value, you need to place a `=` between argument and value.",
-      "default": [],
-      "items": {
-        "type": "string"
-      },
-      "order": 5
-    },
-    "languageToolPath": {
-      "title": "LanguageTool path",
-      "type": "string",
-      "default": "",
-      "description": "Path to LanguageTool directory",
-      "order": 6
-    },
-    "languageToolnGramDataPath": {
-      "title": "LanguageTool path for n-gram data",
-      "type": "string",
-      "default": "",
-      "description": "Path to n-gram data for the LanguageTool server. For more information about n-gram data visit https://dev.languagetool.org/finding-errors-using-n-gram-data.html and look into the README.",
-      "order": 7
-    },
-    "languageToolServerOptions": {
-      "title": "LanguageTool server options",
-      "type": "string",
-      "default": "",
-      "description": "Additional options passed to the local LanguageTool server. The path for n-gram data is added automatically if given.",
-      "order": 8
+    "lt": {
+      "title": "LanguageTool Settings",
+      "collapsed": true,
+      "type": "object",
+      "order": 4,
+      "properties": {
+        "disabledRules": {
+          "title": "Ignored LanguageTool rules",
+          "type": "string",
+          "default": "",
+          "description": "Comma-separated list of LanguageTool rules that should be ignored. If you change this, you may want to add `WHITESPACE_RULE` which is the YaLafi default value.",
+          "order": 2
+        },
+        "serverOptions": {
+          "title": "LanguageTool server options",
+          "type": "string",
+          "default": "",
+          "description": "Additional options passed to the local LanguageTool server. The path for n-gram data is added automatically if given.",
+          "order": 4
+        },
+        "nGramDataPath": {
+          "title": "LanguageTool path for n-gram data",
+          "type": "string",
+          "default": "",
+          "description": "Path to n-gram data for the LanguageTool server. For more information about n-gram data visit https://dev.languagetool.org/finding-errors-using-n-gram-data.html and look into the README.",
+          "order": 3
+        },
+        "path": {
+          "title": "LanguageTool path",
+          "type": "string",
+          "default": "",
+          "description": "Path to LanguageTool directory",
+          "order": 5
+        }
+      }
     },
     "showContextInLinterMessage": {
       "type": "boolean",
       "default": "false",
       "description": "Show the YaLafi output in the linter message to see if an error is due to the conversion YaLafi has done.",
-      "order": 3
-    },
-    "disableTimeout": {
-      "title": "Disable Execution Timeout",
-      "type": "boolean",
-      "default": false,
-      "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
-      "order": 9
+      "order": 5
     },
     "disableCRLFWarning": {
       "title": "Disable CRLF conversion warning",
       "type": "boolean",
       "default": false,
       "description": "It can cause problems if the end of line mode is set to CRLF. To prevent problems linter-YaLafi notifies you and gives you the option to automatically convert from CRLF to LF",
-      "order": 10
+      "order": 6
+    },
+    "disableTimeout": {
+      "title": "Disable Execution Timeout",
+      "type": "boolean",
+      "default": false,
+      "description": "By default processes running longer than 30 seconds will be automatically terminated. Enable this option if you are getting messages about process execution timing out.",
+      "order": 7
     }
   },
   "providedServices": {
